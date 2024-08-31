@@ -23,19 +23,35 @@
         }
          nav {
             margin-top: 1rem;
+            display: flex;
+            flex-wrap: wrap; /* Allow wrapping */
+            justify-content: center; /* Center the buttons */
+            gap: 10px; /* Space between buttons */
         }
         nav a {
-            display: inline-block;
-            margin: 0 10px;
+            flex: 1 1 auto;
+            margin: 5px;
             padding: 10px 20px;
             background-color: #fff;
             color: #3498db;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: bold;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+             border-radius: 5px;
+             text-decoration: none;
+             font-weight: bold;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             transition: background-color 0.3s, color 0.3s;
+            text-align: center;
         }
+    @media (max-width: 600px) {
+        nav {
+        flex-direction: column; /* Stack the buttons vertically */
+        align-items: center;
+    }
+
+    nav a {
+        width: 100%; /* Make buttons full width */
+        max-width: 300px; /* Optionally set a max-width */
+    }
+}
         nav a:hover {
             background-color: #2980b9;
             color: #fff;
@@ -62,7 +78,7 @@
             font-size: 1.2em;
         }
         .important {
-            color: #e74c3c;
+            color: #ff0000;
             font-weight: bold;
         }
         .imp {
@@ -86,9 +102,37 @@
             background-color: #3498db;
             color: white;
         }
+          
+        .warning-message {
+            background-color: #e74c3c;
+            color: white;
+            padding: 10px 0;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            text-align: center;
+            font-weight: bold;
+            animation: blink 10s infinite;
+        }
+
+        @keyframes blink {
+            0%, 50%, 100% {
+                opacity: 1;
+            }
+            25%, 75% {
+                opacity: 0;
+            }
+        }
+        body {
+            padding-top: 60px;
+        }
     </style>
 </head>
 <body>
+    <div class="warning-message">
+        <span>⚠️ Important: Download the study materials now before they're removed! ⚠️</span>
+    </div>
     <header>
         <h1>📚 Study Materials for Session 2024-25</h1>
         <p>Your gateway to academic excellence!</p>
