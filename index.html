@@ -5,6 +5,126 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Study Materials for 2024-25</title>
     <style>
+        .countdown {
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 1rem;
+            animation: blink 1s infinite;
+        }
+
+        @keyframes blink {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0;
+            }
+        }
+        .button-container {
+    text-align: center;
+}
+
+button {
+    display: inline-block;
+    margin: 10px auto; /* Center the buttons */
+}
+
+        button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px;
+            color: white;
+            background-color: #3498db;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+
+        /* Animations */
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-20px); }
+            60% { transform: translateY(-10px); }
+        }
+
+        @keyframes glow {
+            0% { box-shadow: 0 0 5px #3498db; }
+            50% { box-shadow: 0 0 20px #3498db; }
+            100% { box-shadow: 0 0 5px #3498db; }
+        }
+
+        @keyframes wobble {
+            0%, 100% { transform: rotate(0deg); }
+            25% { transform: rotate(-5deg); }
+            75% { transform: rotate(5deg); }
+        }
+
+        @keyframes hover {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-5px); }
+            100% { transform: translateY(0); }
+        }
+
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            25%, 75% { transform: translateX(-5px); }
+            50% { transform: translateX(5px); }
+        }
+
+        @keyframes swing {
+            0% { transform: rotate(0deg); }
+            20% { transform: rotate(15deg); }
+            40% { transform: rotate(-10deg); }
+            60% { transform: rotate(5deg); }
+            80% { transform: rotate(-5deg); }
+            100% { transform: rotate(0deg); }
+        }
+
+        @keyframes flip {
+            0%, 100% { transform: rotateY(0); }
+            50% { transform: rotateY(180deg); }
+        }
+
+        @keyframes blink {
+            0%, 50%, 100% { opacity: 1; }
+            25%, 75% { opacity: 0; }
+        }
+
+        @keyframes rubberBand {
+            0%, 100% { transform: scale(1); }
+            30% { transform: scaleX(1.25) scaleY(0.75); }
+            40% { transform: scaleX(0.75) scaleY(1.25); }
+            50% { transform: scaleX(1.15) scaleY(0.85); }
+            65% { transform: scaleX(0.95) scaleY(1.05); }
+            75% { transform: scaleX(1.05) scaleY(0.95); }
+        }
+
+        /* Apply animations to buttons */
+        #shareButton1 { animation: pulse 2s infinite; }
+        #shareButton2 { animation: bounce 2s infinite; }
+        #shareButton3 { animation: glow 2s infinite; }
+        #shareButton4 { animation: wobble 2s infinite; }
+        #shareButton5 { animation: hover 2s infinite; }
+        #shareButton6 { animation: shake 2s infinite; }
+        #shareButton7 { animation: swing 2s infinite; }
+        #shareButton8 { animation: flip 2s infinite; }
+        #shareButton9 { animation: blink 2s infinite; }
+        #shareButton10 { animation: rubberBand 2s infinite; }
+
         body {
             font-family: Arial, sans-serif;
             line-height: 1.6;
@@ -133,6 +253,9 @@
     <div class="warning-message">
         <span>⚠️ Important: Download the study materials now before they're removed! ⚠️</span>
     </div>
+    <div class="countdown">
+        Hurry up! Going to Delete in <span id="countdown"></span>
+    </div>
     <header>
         <h1>📚 Study Materials for Session 2024-25</h1>
         <p>Your gateway to academic excellence!</p>
@@ -143,10 +266,12 @@
             <a href="#class12">Class 12</a>
         </nav>
     </header>
-    
+    <div class="button-container">
+    <button id="shareButton1">Share This Website</button>
+</div>
 
     <div class="section">
-        <h2>📢 Best Books for 2024-25</h2>
+        <h2><center>📢 Best Books for 2024-25</center></h2>
         <p class="important">Read these books and do all questions 👍 You can easily get 90-95% (but complete these books entirely)</p>
         <ul>
             <li>Class 9 - <a href="https://bit.ly/3wT0l0P" target="_blank">Download PDF</a></li>
@@ -159,7 +284,7 @@
     </div>
 
     <div class="section">
-        <h2>🔠 Sample Papers - Atom Bomb</h2>
+        <h2><center>🔠 Sample Papers - Atom Bomb</center></h2>
         <p>These PDFs are created by CBSE Experts and contain important questions 🔥 which are 80-90% similar to the actual CBSE paper ✅</p>
         <ul>
             <li>Class 10 - <a href="https://bit.ly/3QWL3Ps" target="_blank">Download PDF</a></li>
@@ -167,9 +292,12 @@
         </ul>
         <p><span class="emoji">💡</span> Original price: ₹1200, but available here for free!</p>
     </div>
+    <div class="button-container">
 
+    <button id="shareButton2">Share This Website</button>
+</div>
     <div class="section">
-        <h2>🎯 Most Expected Questions - 2025</h2>
+        <h2><center>🎯 Most Expected Questions - 2025</center></h2>
         <p class="important">Complete these questions quickly to score well!</p>
         <ul>
             <li>Science - <a href="https://bit.ly/3wXw6Gb" target="_blank">Download PDF</a></li>
@@ -182,7 +310,7 @@
     </div>
 
     <div class="section">
-        <h2>🎯 Most Expected Questions - 2025</h2>
+        <h2><center>🎯 Most Expected Questions - 2025</center></h2>
         <p class="important">Complete these questions quickly to score well!</p>
         <ul>
             <li>Chemistry - <a href="https://bit.ly/3yBiKjx" target="_blank">Download PDF</a></li>
@@ -199,9 +327,11 @@
         <p><b>This PDF will help you very much in your final board exam</b></p>
         
     </div>
-
+    <div class="button-container">
+    <button id="shareButton3">Share This Website</button>
+</div>
     <div class="section">
-        <h2>📊 ClassXcellence Digest</h2>
+        <h2><center>📊 ClassXcellence Digest</center></h2>
         <p><I>Score 90+ with the best revision materials! Download for FREE and improve your marks 🥰</I></p>
         <ul>
             <li>Class 9 - <a href="https://bit.ly/3VaMaxx" target="_blank">Download PDF</a></li>
@@ -213,7 +343,7 @@
     </div>
 
     <div class="section">
-        <h2>📣 ClassXpress Revision Kit</h2>
+        <h2><center>📣 ClassXpress Revision Kit</center></h2>
         <p>Best Revision PDFs for session 2024-25! Download quickly and improve your marks 🥰</p>
         <ul>
             <li>Class 9 - <a href="https://bit.ly/3QXJlNT" target="_blank">Download PDF</a></li>
@@ -224,9 +354,11 @@
         <p><span class="emoji">💡</span> Original price: ₹499 per subject, but available here for free!</p>
         <p class="important">⚠️  Best Revision PDFs for session 2024-25 !! Jaldi se download krlo and marks improve krooo </p>
     </div>
-
+    <div class="button-container">
+    <button id="shareButton4">Share This Website</button>
+</div>
     <div class="section">
-        <h2>🔔 Very Important Questions - 2025</h2>
+        <h2><center>🔔 Very Important Questions - 2025</center></h2>
         <p class="important">Complete these questions quickly to score well!</p>
         <ul>
             <li>Sanskrit - <a href="https://bit.ly/3QRNUJp" target="_blank">Download PDF</a></li>
@@ -240,7 +372,7 @@
     </div>
 
     <div class="section">
-        <h2>🔔 Very Important Questions - 2025</h2>
+        <h2><center>🔔 Very Important Questions - 2025</center></h2>
         <p class="important">Complete these questions quickly to score well!</p>
         <ul>
             <li>English - <a href="https://bit.ly/3wM73Wr" target="_blank">Download PDF</a></li>
@@ -260,13 +392,16 @@
         </ul>
         <p class="imp"> 💕 Jaldi se ye sare questions krlooo and achhe marks laoo</p>
     </div>
+    <div class="button-container">
+          <button id="shareButton5">Share This Website</button>
+        </div>
     <header>
         <h1 id="class10">Class 10 Study Materials</h1>
         <nav>
             <a href="#SCIENCE10">SCIENCE</a>
             <a href="#MATH10">MATHS</a>
             <a href="#SST10">SST</a>
-            <a href="#class12">HINDI</a>
+            <a href="#HINDI10">HINDI</a>
             <a href="#ENGLISH10">ENGLISH</a>
         </nav>
     </header>
@@ -292,7 +427,9 @@
             <li><strong>1 Page Handwritten Notes:</strong> <a href="https://teraboxlink.com/s/1AqWteJRmqI9dyTqVk9qsVA" target="_blank">Download 1 Page Handwritten Notes</a></li>
         </ul>
     </div>
-
+    <div class="button-container">
+    <button id="shareButton6">Share This Website</button>
+</div>
     <div class="section">
         <h2 id="MATH10" style="color:red;"><center>Maths Study Materials</center></h2>
         <ul>
@@ -315,8 +452,9 @@
             
         </ul>
     </div>
-
-
+    <div class="button-container">
+    <button id="shareButton7">Share This Website</button>
+</div>
     <div class="section">
         <h2 id="SST10" style="color:red;"><center>Social Science Study Materials</center></h2>
         <ul>
@@ -335,10 +473,13 @@
             <li><strong>MAP important Questions with PYQs:</strong> <a href="https://teraboxlink.com/s/1ROl1oQfTzQNnxbDLtJP_og" target="_blank">Download MAP important Questions with PYQs</a></li>  
         </ul>
     </div>
+    <div class="button-container">
+    <button id="shareButton8">Share This Website</button>
+</div>
     <div class="section">
         <h2 id="ENGLISH10" style="color:red;"><center>English Study Materials</center></h2>
         <ul>
-            <li><strong>NCERT Book:</strong> <a href="" target="_blank">Download NCERT Book</a></li>
+            <li><strong>NCERT Book:</strong> <a href="https://teraboxlink.com/s/1Tx5wiFqxySpLJ-97TAuIxA" target="_blank">Download NCERT Book</a></li>
             <li><strong>Handwritten Notes:</strong> <a href="https://teraboxlink.com/s/1TQR0Xs0ohmHxdlb3B9uPvQ" target="_blank">Download Handwritten Notes</a></li>
             <li><strong>Previous Year Questions (PYQ):</strong> <a href="https://teraboxlink.com/s/1_TTNDeLjo0pnpbNqvHbhqA" target="_blank">Download Previous Year Questions</a></li>
             <li><strong>Key Points and Important Questions:</strong> <a href="https://teraboxlink.com/s/1fap_XzCP8rHO5RBs1g8zng" target="_blank">Download Key Points and Important Questions</a></li>
@@ -353,8 +494,96 @@
             <li><strong>Case Study Based Questions:</strong> <a href="https://teraboxlink.com/s/1rQB3x97ESHdMFTokADOFZA" target="_blank">Download Case Study Based Questions</a></li>  
         </ul>
     </div>
+    <div class="button-container">
+    <button id="shareButton9">Share This Website</button>
+</div>
+    <div class="section">
+        <h2 id="HINDI10" style="color:red;"><center>Hindi Study Materials</center></h2>
+        <ul>
+            <li><strong>NCERT Book:</strong> <a href="https://teraboxlink.com/s/1mfbSr0hIbQXC0AVWHnhHvw" target="_blank">Download NCERT Book</a></li>
+            <li><strong>Previous Year Questions (PYQ):</strong> <a href="https://teraboxlink.com/s/11AaHRDYA6qu-6638QNeDgA" target="_blank">Download Previous Year Questions</a></li>
+            <li><strong>Key Points and Important Questions:</strong> <a href="https://teraboxlink.com/s/1dGElJXsnNClFSFKarPsAEQ" target="_blank">Download Key Points and Important Questions</a></li>
+            <li><strong>NCERT Notes:</strong> <a href="https://teraboxlink.com/s/1Hxxe0Bq5s-uw3ksiU3FV7A" target="_blank">Download Important Questions</a></li>
+            <li><strong>Sample Papers:</strong> <a href="https://teraboxlink.com/s/1n3a5lpSF6c1BisTeewxBYQ" target="_blank">Download Sample Papers</a></li>
+            <li><strong>ChapterWise Test Papers by CBSE:</strong> <a href="https://teraboxlink.com/s/1de_SH6x1xczYTPWUftkN8A" target="_blank">Download ChapterWise Test Papers by CBSE</a></li>
+            <li><strong>Summary + Important Questions:</strong> <a href="https://teraboxlink.com/s/1hGmn1NDaAUAxij6ihbJXqg" target="_blank">Download Summary + Important Questions</a></li>
+            <li><strong>Worksheets:</strong> <a href="https://teraboxlink.com/s/13KAZCDXfzAQhirM-V5q1gA" target="_blank">Download Worksheets</a></li>
+            <li><strong>Revision Materials:</strong> <a href="https://teraboxlink.com/s/1XIo405T2_K4uiGxH5HLfjQ" target="_blank">Download Revision Materials</a></li>
+            <li><strong>Question Banks:</strong> <a href="https://teraboxlink.com/s/1fwn4ww2oGbOOUi4U3FBn0w" target="_blank">Download Question Banks</a></li>
+             
+        </ul>
+    </div>
+    <div class="button-container">
+    <button id="shareButton10">Share This Website</button>
+</div>
     <footer>
         <p><strong>Note:</strong> All materials are based on the new 2024-25 syllabus. Download and save these PDFs before they're removed!</p>
     </footer>
+    <script>
+        const buttons = [
+    { id: 'shareButton1', title: 'Premium Study Materials' },
+    { id: 'shareButton2', title: 'Premium Study Materials' },
+    { id: 'shareButton3', title: 'Premium Study Materials' },
+    { id: 'shareButton4', title: 'Premium Study Materials' },
+    { id: 'shareButton5', title: 'Premium Study Materials' },
+    { id: 'shareButton6', title: 'Premium Study Materials' },
+    { id: 'shareButton7', title: 'Premium Study Materials' },
+    { id: 'shareButton8', title: 'Premium Study Materials' },
+    { id: 'shareButton9', title: 'Premium Study Materials' },
+    { id: 'shareButton10', title: 'Premium Study Materials' },
+    
+    // Add entries up to shareButton10
+];
+
+buttons.forEach(button => {
+    const shareButton = document.getElementById(button.id);
+
+    shareButton.addEventListener('click', async () => {
+        const shareData = {
+            title: button.title,
+            text: 'Check out this amazing resource page for students!',
+            url: window.location.href
+        };
+
+        if (navigator.share) {
+            try {
+                await navigator.share(shareData);
+                console.log('Shared successfully');
+            } catch (err) {
+                console.log('Error: ' + err);
+            }
+        } else {
+            navigator.clipboard.writeText(window.location.href).then(() => {
+                alert('Link copied to clipboard! You can now paste and share it.');
+            }).catch(err => {
+                console.log('Error copying to clipboard: ', err);
+            });
+        }
+    });
+});
+
+// Countdown timer
+function startCountdown(duration) {
+            const countdownElement = document.getElementById('countdown');
+
+            let timer = duration;
+            const interval = setInterval(() => {
+                const minutes = Math.floor(timer / 60);
+                const seconds = timer % 60;
+                countdownElement.textContent = `${minutes}:${seconds.toString().padStart(2, '0')}`;
+
+                if (timer <= 0) {
+                    clearInterval(interval);
+                    countdownElement.textContent = 'Time\'s up!';
+                }
+                timer--;
+            }, 1000);
+        }
+
+        // Set the countdown duration (in seconds)
+        const countdownDuration = 120 * 60; // 1 hour
+        startCountdown(countdownDuration);
+
+</script>
 </body>
 </html>
